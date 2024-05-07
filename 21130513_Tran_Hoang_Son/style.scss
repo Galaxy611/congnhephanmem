@@ -1,0 +1,454 @@
+//21130513_TranHoangSon_0816438935_DH21DTD
+
+* {
+  font-family: sans-serif;
+
+  body {
+    background-image: url("image/background1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    .container{
+      display: flex;
+      position: relative;
+      .left_side{
+        width: calc(30%);
+        .name_Game{
+          font-size: 40px;
+          margin-left: 100px;
+          margin-top: 20px;
+          img{
+            width: 200px;
+            height: auto;
+            filter: drop-shadow(0 0 14px #CCC);
+          }
+        }
+      }
+      .container_mid_right{
+        display: block;
+        border: 4px solid rgba(216, 221, 226, 0.99);
+        border-radius: 30px;
+        background-color: rgba(35, 211, 229, 0.2);
+        height: 700px;
+        .content_mid_right{
+          margin-left: 30px;
+          margin-right: 30px;
+          display: flex;
+          .mid_side{
+            position: relative;
+            #board{
+              margin-top: 50px;
+              border: 4px solid rgba(216, 221, 226, 0.99);
+              z-index: 1;
+              border-radius: 10px;
+            }
+            .box_cover{
+              display: none;
+              background: purple;
+              position: absolute;
+              bottom: 8px;
+              left: 4px;
+              width: 300px;
+              height: 150px;
+              border-radius: 0px  0px 10px 10px;
+
+              opacity: 1;
+              //animation: fade 3s linear infinite;
+              animation: fade1 3s linear infinite;
+              //, fadeMove 2s linear forwards 2s
+            }
+            .box_cover2{
+              display: none;
+              background: purple;
+              position: absolute;
+              bottom: 368px;
+              left: 4px;
+              width: 300px;
+              height: 120px;
+              //border-radius: 0px  0px 10px 10px;
+
+              opacity: 1;
+              animation: fade2 3s linear infinite;
+              //animation: fade1 3s linear infinite;
+            }
+          }
+          .right_side{
+            .side-bar{
+              font-size: 20px;
+              margin-top: 50px;
+              margin-left: 40px;
+              .content_side_bar{
+                .container_score,.container_level{
+                  border: 3px solid rgba(216, 221, 226, 0.99);
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  width: 140px;
+                  height: 120px;
+                  border-radius: 10px 10px 0px 0px; /* Bỏ góc trên bên trái và bên phải, giữ góc dưới */
+                  background-color: rgba(216, 221, 226, 0.99);
+                  margin-bottom: 40px;
+
+                  .name_score, .name_level{
+                    width: 100%;
+                    text-align: center;
+                    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 30px;
+                    font-weight: 600;
+                  }
+                  .container_score{
+                    height: 40px;
+                    background-color: rgba(30, 30, 51, 1);
+                    width: 80%;
+                    #score , #level{
+                      color: rgb(0, 255, 255)	;
+                      text-align: center;
+                      justify-items: center;
+                      font-size: 24px;
+
+
+                    }
+                  }
+
+                }
+                #music_button{
+                  .fa-solid.fa-music{
+                    font-size: 30px;
+                    margin-left: 60px;
+                    width: 50px;
+                    height: auto;
+                    cursor: pointer;
+                    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+                    background-clip: text;
+                    color: transparent;
+                    //color: #144f89;
+                  }
+
+                }
+                .menu_button{
+                  border: 10px solid rgba(143, 112, 40, 0.99);
+                  background-color: rgba(223, 164, 29, 0.99);
+                  border-radius: 10px;
+                  display: flex;
+                  text-align: center;
+                  height: 40px;
+                  width: 120px;
+                  cursor: pointer;
+
+                  .fa-solid.fa-list{
+                    align-content: center;
+                    margin-right:4px ;
+                    margin-left: 10px;
+                    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+                    background-clip: text;
+                    color: transparent;
+
+
+                  }
+                  .name_menu{
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    margin-left: 10px;
+                    text-align: center;
+                    align-content: center;
+                    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+                    background-clip: text;
+                    color: transparent;
+                    font-weight: 600;
+
+                  }
+                }
+
+              }
+
+
+            }
+          }
+        }
+      }
+
+
+    }
+    .container_pop_up{
+      color: #144f89;
+
+      position: absolute;
+      display: block;
+      top: 10px;
+      left: 464px;
+      border: 4px solid rgba(216, 221, 226, 0.99);
+      border-radius: 30px;
+      background-color: rgba(172,230,208,255);
+      height: 700px;
+      width: 566px;
+      .content_pop_up{
+        display: block;
+        .arrow_buttons{
+          text-align: center;
+          .arrow_up{
+
+          }
+          .explain_arrow_button{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 100px;
+            margin-left: 100px;
+            .speed_up{
+              margin-left: 20px;
+            }
+          }
+        }
+        .level_button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          .content_level_button{
+            display: flex;
+            text-align: center;
+            background-color: rgba(223, 164, 29, 0.99);
+            width: 120px;
+            height: 30px;
+            border: 7px solid rgba(143, 112, 40, 0.99);
+            border-radius: 10px;
+              .level_btn{
+              margin: 0px;
+              padding: 0px;
+              border: 7px solid  rgba(223, 164, 29, 0.99);
+            }
+            .fa-solid.fa-signal{
+              margin-top: 9px;
+              margin-left: 10px;
+              margin-right: 10px;
+            }
+          }
+
+        }
+        .exit_button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          .content_exit_button{
+            display: flex;
+            text-align: center;
+            background-color: rgb(220, 20, 60);
+            color: white;
+            width: 120px;
+            height: 30px;
+            border: 7px solid #8B0000;
+            border-radius: 10px;
+            .exit{
+              margin-top: 6px;
+              margin-left: 4px;
+            }
+            .fa-solid.fa-arrow-right-from-bracket{
+              margin-top: 9px;
+              margin-left: 12px;
+              margin-right: 14px;
+            }
+          }
+
+        }
+
+      }
+
+
+    }
+  }
+
+}
+
+.content_level_pop_up{
+  display: none;
+  .level_list{
+    margin: 20px;
+    margin-left: 10px;
+  .level_1, .level_2, .level_3,.level_4, .level_5, .level_6{
+    display: flex;
+    font-size: 20px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    .level_discription{
+      font-size: 14px;
+      margin: 0 auto;
+      margin-top: 4px;
+      width: calc(80%);
+      text-align: justify;
+    }
+  }
+  }
+}
+.level{
+  border: 10px solid rgba(143, 112, 40, 0.99);
+  background-color: rgba(223, 164, 29, 0.99);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  height: 40px;
+  width: calc(15%);
+  font-size: 16px;
+  text-align: center;
+  align-content: center;
+}
+.exit_button_level{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .content_exit_button{
+    display: flex;
+    text-align: center;
+    background-color: rgb(220, 20, 60);
+    color: white;
+    width: 120px;
+    height: 30px;
+    border: 7px solid #8B0000;
+    border-radius: 10px;
+    .exit{
+      margin-top: 6px;
+      margin-left: 14px;
+    }
+    .fa-solid.fa-arrow-right-from-bracket{
+      margin-top: 9px;
+      margin-left: 14px;
+      margin-right: 10px;
+    }
+  }
+
+}
+
+.game_over{
+  display: none;
+  position: absolute;
+  background-color: #cfcfd5;
+  width: 400px  ;
+  height: 180px;
+  border-radius: 20px;
+  top: 250px;
+  left: 520px;
+  z-index: 10;
+  .game_over_content{
+
+    border-radius: 20px;
+    .notifi_game_over{
+      font-size: 30px;
+      text-align: center;
+      padding-top: 30px;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+
+    }
+    .game_over_btn{
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
+}
+#again_btn, #main_menu{
+  border: 10px solid rgba(143, 112, 40, 0.99);
+  background-color: rgba(223, 164, 29, 0.99);
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#again_btn{
+
+  background-color: rgb(220, 20, 60);
+  color: white;
+
+  border: 10px solid #8B0000;
+}
+
+.gioiThieuBanThan table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.gioiThieuBanThan table td {
+  width: 30%;
+  height: 40px;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #144f89;
+}
+.headline_gioi_thieu{
+  font-size: 30px;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 4px;
+
+}
+
+ #music_button :hover{
+  scale: 1.5;
+}
+
+
+.arrow_icon{
+  font-size: 50px;
+  padding: 10px;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateY(-150px);
+
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade2 {
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateY(-120px);
+
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade1 {
+  0%{
+    opacity: 1;
+  }
+
+  50%{
+    opacity: 0.5;
+  }
+
+  100%{
+    opacity:1 ;
+  }
+  
+}

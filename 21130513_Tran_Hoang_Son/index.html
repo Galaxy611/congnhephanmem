@@ -1,0 +1,171 @@
+<!--21130513_TranHoangSon_0816438935_DH21DTD-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TETRIS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c23e205c25.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div  class="container">
+    <div class="left_side">
+     <div class="name_Game">
+       <img  src="image/tetris-logo.png">
+     </div>
+      <div class="game_over" id="game_over">
+        <div class="game_over_content">
+          <div class="notifi_game_over">GAME OVER !</div>
+          <div class="game_over_btn">
+            <div id="again_btn">AGAIN</div>
+            <div id="main_menu">MAIN MENU</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="container_mid_right" id="container_board">
+      <div class="content_mid_right">
+        <div class="mid_side">
+          <canvas id="board"></canvas>
+          <div class="box_cover2"></div>
+          <div  class="box_cover"></div>
+        </div>
+        <div class="right_side">
+          <div class="side-bar">
+            <div class="content_side_bar">
+              <div class="container_score">
+                <p class="name_score">Score</p>
+                <div class="container_score">
+                  <span id="score">0</span>
+                </div>
+              </div>
+
+              <div class="container_level">
+                <p class="name_level">Level</p>
+                <div class="container_score">
+                  <span id="level">1</span>
+                </div>
+              </div>
+
+
+
+
+                <p id="music_button"><i class="fa-solid fa-music"></i></p>
+              <div class="menu_button" id="menu_button">
+                <i class="fa-solid fa-list"></i>
+                <p class="name_menu">Menu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  <div class="container_pop_up">
+    <div class="content_pop_up">
+      <div class="arrow_buttons">
+        <div class="arrow_up">
+          <p class="arrow_button">Rotate</p>
+          <i class="fa-solid fa-square-caret-up arrow_icon"></i>
+        </div>
+        <div class="arrow_3_button">
+          <i class="fa-solid fa-square-caret-left  arrow_icon"></i>
+          <i class="fa-solid fa-square-caret-down arrow_icon"></i>
+          <i class="fa-solid fa-square-caret-right arrow_icon"></i>
+        </div>
+        <div class="explain_arrow_button">
+          <p>Move Left</p>
+          <p class="speed_up">Speed Up</p>
+          <p>Move Right</p>
+        </div>
+      </div>
+      <div class="gioiThieuBanThan">
+        <p class="headline_gioi_thieu">GIỚI THIỆU BẢN THÂN</p>
+        <table>
+          <tr>
+            <td>Tên đồ án</td>
+            <td>Game Tetris</td>
+          </tr>
+          <tr>
+            <td>Họ và tên</td>
+            <td>Trần Hoàng Sơn</td>
+          </tr>
+          <tr>
+            <td>Lớp - Mssv</td>
+            <td>DH21DTD - 21130513</td>
+          </tr>
+          <tr>
+            <td>Email liên hệ</td>
+            <td>21130513@st.hcmuaf.edu.vn</td>
+          </tr>
+          <tr>
+            <td>Video hướng dẫn</td>
+            <td><a href="https://www.youtube.com/watch?v=11cDVx5pKkg" target="_blank">Video hướng dẫn chơi</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="level_button" id="level_game">
+        <div class="content_level_button">
+          <i class="fa-solid fa-signal"></i>
+          <p class="level_btn">Level</p>
+        </div>
+      </div>
+
+      <div class="exit_button" id="exit">
+        <div class="content_exit_button">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <p class="exit">EXIT</p>
+        </div>
+      </div>
+    </div>
+    <div class="content_level_pop_up" id="level_pop_up">
+      <div class="level_list">
+        <div class="level_1">
+          <div class="level" id="level1">Level 1</div>
+          <div class="level_discription">Người chơi sử dụng các phím điều hướng để di chuyển khối gạch, mũi tên hương lên dùng để xoay khối gạch theo chiều kim đồng hồ. Khi 1 hàng được lắp đầy gạch thì sẽ được xóa đi, người chơi được 100 điểm. Trò chơi kết thúc khi không còn không gian để các khối gạch mới rơi xuống</div>
+<!--          <p class="level_discription">Game co banGame co banGame co banGame co banGame co banGame co banGame co ban</p>-->
+
+        </div>
+        <div class="level_2">
+          <div class="level" id="level2">Level 2</div>
+          <div class="level_discription">Ở level này có thêm 1 tấm màn che nhấp nháy mỗi 2s ngăn cản tầm nhìn </div>
+        </div>
+        <div class="level_3">
+          <div class="level" id="level3">Level 3</div>
+          <div class="level_discription">Ở level này có 1 tấm màn che và 1 tấm màn che nhấp nháy chạy dọc màn hình ngăn cản tầm nhìn</div>
+        </div>
+        <div class="level_4">
+          <div class="level" id="level4">Level 4</div>
+          <div class="level_discription">Ở level này sẽ có 1 tầm màn che chạy dọc màn hình ngăn cản tầm nhìn, người chơi không thể dùng chức năng xoay</div>
+        </div>
+        <div class="level_5">
+          <div class="level" id="level5">Level 5</div>
+          <div class="level_discription">Ở level này sẽ có hai khối gạch cản trở việc điều khiển các khối gạch rơi xuống và  1 tấm màn che nhấp nháy ngăn cản tầm nhìn</div>
+        </div>
+        <div class="level_6">
+          <div class="level" id="level6">Level 6</div>
+          <div class="level_discription">Ở level này có 1 tầm màn che ngăn cản tầm nhìn, 2 khối gạch cản trở, ngoài ra 1 số khối gạch sẽ được thay bằng các khối phức tạp hơn  </div>
+        </div>
+      </div>
+      <div class="exit_button_level" id="exit_level">
+        <div class="content_exit_button">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <p class="exit">EXIT</p>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

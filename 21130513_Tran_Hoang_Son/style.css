@@ -1,0 +1,406 @@
+@charset "UTF-8";
+* {
+  font-family: sans-serif;
+}
+* body {
+  background-image: url("image/background1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+* body .container {
+  display: flex;
+  position: relative;
+}
+* body .container .left_side {
+  width: 30%;
+}
+* body .container .left_side .name_Game {
+  font-size: 40px;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+* body .container .left_side .name_Game img {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 0 14px #CCC);
+}
+* body .container .container_mid_right {
+  display: block;
+  border: 4px solid rgba(216, 221, 226, 0.99);
+  border-radius: 30px;
+  background-color: rgba(35, 211, 229, 0.2);
+  height: 700px;
+}
+* body .container .container_mid_right .content_mid_right {
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+}
+* body .container .container_mid_right .content_mid_right .mid_side {
+  position: relative;
+}
+* body .container .container_mid_right .content_mid_right .mid_side #board {
+  margin-top: 50px;
+  border: 4px solid rgba(216, 221, 226, 0.99);
+  z-index: 1;
+  border-radius: 10px;
+}
+* body .container .container_mid_right .content_mid_right .mid_side .box_cover {
+  display: none;
+  background: purple;
+  position: absolute;
+  bottom: 8px;
+  left: 4px;
+  width: 300px;
+  height: 150px;
+  border-radius: 0px 0px 10px 10px;
+  opacity: 1;
+  animation: fade1 3s linear infinite;
+}
+* body .container .container_mid_right .content_mid_right .mid_side .box_cover2 {
+  display: none;
+  background: purple;
+  position: absolute;
+  bottom: 368px;
+  left: 4px;
+  width: 300px;
+  height: 120px;
+  opacity: 1;
+  animation: fade2 3s linear infinite;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_score, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_level {
+  border: 3px solid rgba(216, 221, 226, 0.99);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 120px;
+  border-radius: 10px 10px 0px 0px; /* Bỏ góc trên bên trái và bên phải, giữ góc dưới */
+  background-color: rgba(216, 221, 226, 0.99);
+  margin-bottom: 40px;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_score .name_score, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_score .name_level, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_level .name_score, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_level .name_level {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 30px;
+  font-weight: 600;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_score .container_score, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_level .container_score {
+  height: 40px;
+  background-color: rgb(30, 30, 51);
+  width: 80%;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_score .container_score #score, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_score .container_score #level, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_level .container_score #score, * body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .container_level .container_score #level {
+  color: rgb(0, 255, 255);
+  text-align: center;
+  justify-items: center;
+  font-size: 24px;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar #music_button .fa-solid.fa-music {
+  font-size: 30px;
+  margin-left: 60px;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .menu_button {
+  border: 10px solid rgba(143, 112, 40, 0.99);
+  background-color: rgba(223, 164, 29, 0.99);
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .menu_button .fa-solid.fa-list {
+  align-content: center;
+  margin-right: 4px;
+  margin-left: 10px;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+}
+* body .container .container_mid_right .content_mid_right .right_side .side-bar .content_side_bar .menu_button .name_menu {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+* body .container_pop_up {
+  color: #144f89;
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 464px;
+  border: 4px solid rgba(216, 221, 226, 0.99);
+  border-radius: 30px;
+  background-color: rgb(172, 230, 208);
+  height: 700px;
+  width: 566px;
+}
+* body .container_pop_up .content_pop_up {
+  display: block;
+}
+* body .container_pop_up .content_pop_up .arrow_buttons {
+  text-align: center;
+}
+* body .container_pop_up .content_pop_up .arrow_buttons .explain_arrow_button {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+* body .container_pop_up .content_pop_up .arrow_buttons .explain_arrow_button .speed_up {
+  margin-left: 20px;
+}
+* body .container_pop_up .content_pop_up .level_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+* body .container_pop_up .content_pop_up .level_button .content_level_button {
+  display: flex;
+  text-align: center;
+  background-color: rgba(223, 164, 29, 0.99);
+  width: 120px;
+  height: 30px;
+  border: 7px solid rgba(143, 112, 40, 0.99);
+  border-radius: 10px;
+}
+* body .container_pop_up .content_pop_up .level_button .content_level_button .level_btn {
+  margin: 0px;
+  padding: 0px;
+  border: 7px solid rgba(223, 164, 29, 0.99);
+}
+* body .container_pop_up .content_pop_up .level_button .content_level_button .fa-solid.fa-signal {
+  margin-top: 9px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+* body .container_pop_up .content_pop_up .exit_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+* body .container_pop_up .content_pop_up .exit_button .content_exit_button {
+  display: flex;
+  text-align: center;
+  background-color: rgb(220, 20, 60);
+  color: white;
+  width: 120px;
+  height: 30px;
+  border: 7px solid #8B0000;
+  border-radius: 10px;
+}
+* body .container_pop_up .content_pop_up .exit_button .content_exit_button .exit {
+  margin-top: 6px;
+  margin-left: 4px;
+}
+* body .container_pop_up .content_pop_up .exit_button .content_exit_button .fa-solid.fa-arrow-right-from-bracket {
+  margin-top: 9px;
+  margin-left: 12px;
+  margin-right: 14px;
+}
+
+.content_level_pop_up {
+  display: none;
+}
+.content_level_pop_up .level_list {
+  margin: 20px;
+  margin-left: 10px;
+}
+.content_level_pop_up .level_list .level_1, .content_level_pop_up .level_list .level_2, .content_level_pop_up .level_list .level_3, .content_level_pop_up .level_list .level_4, .content_level_pop_up .level_list .level_5, .content_level_pop_up .level_list .level_6 {
+  display: flex;
+  font-size: 20px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.content_level_pop_up .level_list .level_1 .level_discription, .content_level_pop_up .level_list .level_2 .level_discription, .content_level_pop_up .level_list .level_3 .level_discription, .content_level_pop_up .level_list .level_4 .level_discription, .content_level_pop_up .level_list .level_5 .level_discription, .content_level_pop_up .level_list .level_6 .level_discription {
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 4px;
+  width: 80%;
+  text-align: justify;
+}
+
+.level {
+  border: 10px solid rgba(143, 112, 40, 0.99);
+  background-color: rgba(223, 164, 29, 0.99);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+  height: 40px;
+  width: 15%;
+  font-size: 16px;
+  text-align: center;
+  align-content: center;
+}
+
+.exit_button_level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.exit_button_level .content_exit_button {
+  display: flex;
+  text-align: center;
+  background-color: rgb(220, 20, 60);
+  color: white;
+  width: 120px;
+  height: 30px;
+  border: 7px solid #8B0000;
+  border-radius: 10px;
+}
+.exit_button_level .content_exit_button .exit {
+  margin-top: 6px;
+  margin-left: 14px;
+}
+.exit_button_level .content_exit_button .fa-solid.fa-arrow-right-from-bracket {
+  margin-top: 9px;
+  margin-left: 14px;
+  margin-right: 10px;
+}
+
+.game_over {
+  display: none;
+  position: absolute;
+  background-color: #cfcfd5;
+  width: 400px;
+  height: 180px;
+  border-radius: 20px;
+  top: 250px;
+  left: 520px;
+  z-index: 10;
+}
+.game_over .game_over_content {
+  border-radius: 20px;
+}
+.game_over .game_over_content .notifi_game_over {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+.game_over .game_over_content .game_over_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+#again_btn, #main_menu {
+  border: 10px solid rgba(143, 112, 40, 0.99);
+  background-color: rgba(223, 164, 29, 0.99);
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#again_btn {
+  background-color: rgb(220, 20, 60);
+  color: white;
+  border: 10px solid #8B0000;
+}
+
+.gioiThieuBanThan table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gioiThieuBanThan table td {
+  width: 30%;
+  height: 40px;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #144f89;
+}
+
+.headline_gioi_thieu {
+  font-size: 30px;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+#music_button :hover {
+  scale: 1.5;
+}
+
+.arrow_icon {
+  font-size: 50px;
+  padding: 10px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fade1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
